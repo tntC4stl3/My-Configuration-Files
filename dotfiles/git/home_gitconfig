@@ -1,0 +1,12 @@
+[user]
+	email = blackhumour.gj@gmail.com
+	name = tntC4stl3
+[alias]
+    co = checkout
+    ci = commit
+    br = branch
+    st = status
+[color]
+	ui = true
+[core]
+	editor = vim

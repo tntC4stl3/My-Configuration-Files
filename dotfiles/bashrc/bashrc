@@ -1,0 +1,13 @@
+# Ingore duplicats in command history and increase
+# history size to 2000 lines
+export HISTCONTROL=ignoredups
+export HISTSIZE=2000
+
+# Add some helpful aliases
+alias ls='ls --color=auto'
+alias ll='ls -al'
+
+# Python virtualenvwrapper config
+export WORKON_HOME=$HOME/.pyenvs  # directory to store virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+

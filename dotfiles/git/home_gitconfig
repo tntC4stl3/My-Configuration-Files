@@ -1,12 +1,15 @@
 [user]
-	email = blackhumour.gj@gmail.com
-	name = tntC4stl3
+    email = blackhumour.gj@gmail.com
+    name = tntC4stl3
 [alias]
     co = checkout
     ci = commit
     br = branch
     st = status
+
+    # git commit --amend is a convenient way to fix up the most recent commit.
+    amend = commit --amend
 [color]
-	ui = true
+    ui = true
 [core]
-	editor = vim
+    editor = vim

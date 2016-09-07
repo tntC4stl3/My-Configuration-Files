@@ -1,11 +1,28 @@
 Ambari
-=========
+=======
 
-[Hortonworks Document](http://hortonworks.com/downloads/#data-platform)
+1. Generate ssh key on Ambari server, it will be use latter.
+	* ssh-keygen
 
-## Install Flow
+2. Enable NTP on Cluster
+	* `yum install ntp`
+	* check NTP service will be automatically started: `systemctl is-enable ntpd`
+	* set NTP servcie to auto-start on boot: `systemctl enable ntpd`
+	* start NTP service: `systemctl start ntpd`
 
-1. Install CentOS 7 on at lease 3 servers, CentOS 7 ISO can be found [here](https://www.centos.org/download/)
-2. Get the IP addresses and hostnames. Set hostnames like 'node1, node2, node3' etc.
-3. 
+3. Configuring iptables, temporarily disable iptables.
+	* `systemctl disable firewalld`
+	* `service firewalld stop`
+	
+4. Disable SELinux
+	* `setenforce 0`
+	* Permanently disable SELinux: set `SELINUX=disabled` in `/etc/selinux/config`.
 
+5. Install Ambari
+	* `wget -nv http://public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.4.0.1/ambari.repo -O /etc/yum.repos.d/ambari.repo`
+	* `yum install ambari-server`
+
+6. Setup and start Ambari server
+	* `ambari-server setup`
+	* `ambari-server start`
+	* detail please refer to http://docs.hortonworks.com/HDPDocuments/Ambari-2.4.0.1/bk_ambari-installation/content/set_up_the_ambari_server.html

@@ -85,7 +85,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Add useful virtualenvwrapper for Python
-export WORKON_HOME=$HOME/PyEnvs
+export WORKON_HOME=$HOME/.venv
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Python pip auto completion
